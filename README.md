@@ -9,6 +9,6 @@ target pair gets stored in the "order" embedded data field as a complete list. R
 The javascript and html code also incorporates a 1 second delay to prevent one image from loading before the other. The amount of freeze 
 time can be adjusted by the experimenter. 
 
-The uniquepairs.R file is used to populate the loop and merge list. This scipt takes a list of targets along with their sources locations
+The uniquepairs.R file is used to populate the loop and merge list. This scipt takes a list of targets along with their source location
 and outputs all the unique pairs.
 
