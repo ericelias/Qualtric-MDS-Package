@@ -1,0 +1,12 @@
+<span id="hiddentext" style="display:none">
+<div style="text-align: center;"><strong>How dissimilar or similar are these two faces?</strong></div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div style="text-align: center;">
+<ul>
+<img width="300" src="${lm://Field/3}" height="211"><img width="300" src="${lm://Field/5}" height="211">
+</ul>
+</span>
