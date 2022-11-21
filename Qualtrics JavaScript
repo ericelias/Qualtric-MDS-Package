@@ -1,0 +1,53 @@
+Qualtrics.SurveyEngine.addOnload(function()
+
+{
+	function htmlShuffle(elem) {
+    function shuffle(arr) {
+        var len = arr.length;
+        var d = len;
+        var array = [];
+        var k, i;
+		
+        for (i = 0; i < d; i++) {
+            k = Math.floor(Math.random() * len);
+            array.push(arr[k]);
+            arr.splice(k, 1);
+            len = arr.length;
+        }
+        for (i = 0; i < d; i++) {
+            arr[i] = array[i];
+        }
+        return arr;
+    }
+    var el = document.querySelectorAll(elem + " *");
+    document.querySelector(elem).innerHTML = "";
+    
+    let pos = [];
+    for (let i = 0; i < el.length; i++) {
+        pos.push(i);
+    }
+    var prevembed = Qualtrics.SurveyEngine.getEmbeddedData("order") 
+	var order = [prevembed];
+	var row = "${lm://Field/1}";
+    pos = shuffle(pos);
+	order.push(pos, ",");
+	Qualtrics.SurveyEngine.setEmbeddedData('order', order + row );
+    for (let i = 0; i < pos.length; i++) {
+        document.querySelector(elem).appendChild(el[pos[i]]);
+    }
+}
+
+htmlShuffle("ul");
+setTimeout("$('hiddentext').style.display = 'inline'",1000);
+
+});
+
+Qualtrics.SurveyEngine.addOnReady(function()
+{
+
+});
+
+Qualtrics.SurveyEngine.addOnUnload(function()
+{
+
+});
