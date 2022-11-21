@@ -1,5 +1,5 @@
 # Qualtric-MDS-Package
-Contains all the necessary code to build an MDS study in Qualtrics and convert to a similarity matrix from in R
+Contains all the necessary code to build an MDS study in Qualtrics and convert to a similarity matrix in R
 
 Everything is included to create an MDS study in Qualtrics from similarity ratings of two target images. This study uses the Qualtrics
 loop and merge function to control the presenation of target pairs. The javascript and html code include include randomization within
