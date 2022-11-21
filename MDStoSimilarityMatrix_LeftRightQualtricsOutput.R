@@ -1,5 +1,4 @@
 library(dplyr)
-library(tidyr)
 
 ###Qualtrics output
 raw <- read.csv(
