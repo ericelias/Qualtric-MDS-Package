@@ -1,4 +1,5 @@
 library(dplyr)
+library(tidyr)
 
 ###Qualtrics output
 raw <- read.csv(
@@ -7,7 +8,7 @@ raw <- read.csv(
 
 ###Unique pairs list used to create loop and merge in Qualtrics
 uniquepairs <- read.csv(
-  "The complete list copied into loop and merge. ALso the output from the uniquepair.R script", 
+  "The complete list copied into loop and merge. Also the output from the uniquepair.R script", 
   header= TRUE)
 
 ###All targets with abbreviations and list number
